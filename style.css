@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f2f2f2;
+}
+
+.card{
+    display: grid;
+    height: 500px;
+    width: 920px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "card1 card2 card3";
+}
+
+
+.card .item{
+    padding: 48px 30px 46px 47px;
+}
+
+
+.card .item img{
+    height: 40px;
+    width: 65px;
+    margin-bottom: 45px;
+}
+
+.card .item h2{
+    color: #e6f5f9;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-family: 'Big Shoulders Display', cursive;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+.card .item p{
+
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    width: 92%;
+    line-height: 23px;
+    margin-bottom: 85px;
+    
+    color:hsla(0, 0%, 100%, 0.75);
+
+
+}
+
+
+.container .card .item a{
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    color:#e28524;
+    padding: 17px 33px 19px 33px;
+    background-color:#f2f2f2;
+    border-radius: 60px;
+    font-size: 14px;
+    border: 2px solid #f2f2f2;
+    transition: all;
+
+}
+
+.container .card .item a:hover{
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    transition-duration: 700ms;
+
+}
+
+.container .card .item .boton-2{
+    color:#006972 ;
+}
+
+.container .card .item .boton-3{
+    color:#00403f;
+}
+
+.card .card-1{
+    grid-area: card1;
+    background-color: #e28524;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card .card-2{
+    grid-area: card2;
+    background-color: #006972;
+}
+
+
+
+.card .card-3{
+    grid-area: card3;
+    background-color: #00403f;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+@media screen and (max-width:940px) {
+    .container{
+        
+        height: auto;
+        width: auto;
+    }
+
+    .card{
+
+        
+        height: 1330px;
+        width: 330px;
+
+        margin:86px 0px 86px 0px;
+
+        grid-template-columns: 330px;
+        grid-template-rows: repeat(3,442px);
+        grid-template-areas: 
+        'card1'
+        'card2'
+        'card3'
+        ;
+    }
+    .container .card .item a{
+        margin-top: 30px;
+        
+    }
+
+    .container .card .card-1{
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .container .card .card-3{
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .container .card p{
+        margin-bottom: 30px;
+    }
+
+}
